@@ -4,8 +4,8 @@
 import fs from 'fs';
 
 const paths = {
-  NakanoJadiBot: `./${jadi}/`,
-  NakanoSession: `./${sessions}/`
+  NagiJadiBot: `./${jadi}/`,
+  NagiSession: `./${sessions}/`
 };
 
 function cleanSubbotDirectories() {
