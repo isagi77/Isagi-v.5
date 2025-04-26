@@ -54,7 +54,7 @@ git clone https://github.com/El-brayan502/NagiBotV2.git
 ```
 
 ```bash
-cd Nino-Nakano
+cd NagiBotV2
 ```
 
 ```bash
