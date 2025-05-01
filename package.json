@@ -18,7 +18,7 @@
 "eslint": "eslint .",
 "eslintfix": "eslint --fix ."
 },
-"homepage": "https://github.com/JoseXrl15k/Nino-Nakano",
+"homepage": "https://github.com/El-brayan502/NagiBotV2",
 "author": {
 "name": "BRAYAN330"
 },
@@ -27,7 +27,7 @@
 "url": "git+https://github.com/El-brayan502/NagiBotV2.git"
 },
 "bugs": {
-"url": "https://github.com/JoseXrl15k/Nino-Nakano/issues"
+"url": "https://github.com/El-brayan502/NagiBotV2/issues"
 },
 "license": "GPL-3.0-or-later",
 "dependencies": {
