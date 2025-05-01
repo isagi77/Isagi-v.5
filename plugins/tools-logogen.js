@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const handler = async (m, { args, conn }) => {
-    if (args.length < 2) return m.reply('¡Ingresa el título y el slogan! Ejemplo: .logo WhatsApp Bot|Nino Nakano');
+    if (args.length < 2) return m.reply('¡Ingresa el título y el slogan! Ejemplo: .logo WhatsApp Bot|NagiBot-MD');
 
     const [titulo, slogan] = args.join(" ").split("|");
 
