@@ -26,15 +26,10 @@
         <a href="#"><img title="simple-whatsapp-bot" src="https://img.shields.io/badge/-SIMPLE--WHATSAPP--BOT-green?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
     </p>
     <p>
-        <a href="https://github.com/El-brayan502"><img title="Author"    src="https://img.shields.io/badge/Author-Brayan-purple.svg?style=for-the-badge&logo=github"></a>
-    </p>
-    <p>
-  
----------
-
 <p align="center">
 <a href="#"><img title="NyanBot" src="https://img.shields.io/badge/🐬𝑵𝒚𝒂𝒏𝑩𝒐𝒕 | 🔥𝗦𝗮𝗺𝘂𝟯𝟯𝟬🔥 | Sᥲm ყ Pᥱrrყ🥀-black?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
-
+  
+---------
 
 ### **`Click en la imagen para obtener termux`**
 <a
