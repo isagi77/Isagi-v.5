@@ -28,6 +28,8 @@
   
 ---------
 
+<img src="https://i.imgur.com/n1zo2wL.gif" width="30" height="30"/> NyanBot🐬
+
 ### **`Click en la imagen para obtener termux`**
 <a
 href="https://www.mediafire.com/file/3hsvi3xkpq3a64o/termux_118.a"><img src="https://qu.ax/finc.jpg" height="125px"></a>
