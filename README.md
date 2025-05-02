@@ -24,7 +24,7 @@
     </p>
     <p align="center">
 <p align="center">
-<a href="#"><img title="NyanBot" src="https://img.shields.io/badge/🐬𝑵𝒚𝒂𝒏𝑩𝒐𝒕 | 🔥𝗦𝗮𝗺𝘂𝟯𝟯𝟬🔥 | Sᥲm ყ Pᥱrrყ🥀-black?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
+<a href="#"><img title="NyanBot" src="https://img.shields.io/badge/🐬𝐍𝐚𝐠𝐢𝐁𝐨𝐭 | 🔥𝗦𝗮𝗺𝘂𝟯𝟯𝟬🔥 | Sᥲm ყ Pᥱrrყ🥀-black?colorA=%23ff0000&colorB=%23000000&style=for-the-badge"></a>
   
 ---------
 
