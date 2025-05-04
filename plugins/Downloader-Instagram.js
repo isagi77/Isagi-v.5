@@ -31,7 +31,7 @@ const handler = async (m, { text, conn, args }) => {
 
   for (let attempt = 1; attempt <= maxRetries; attempt++) {
     try {
-      await conn.sendMessage(m.chat, { video: { url: videoUrl }, caption: '🍓 Aquí tienes el video de Instagram.', fileName: 'instagram.mp4', mimetype: 'video/mp4' }, { quoted: m });
+      await conn.sendMessage(m.chat, { video: { url: videoUrl }, caption: '🐬 Aquí tienes el video de Instagram.', fileName: 'instagram.mp4', mimetype: 'video/mp4' }, { quoted: m });
       await m.react('✅');
       break;
     } catch (e) {
