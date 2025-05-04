@@ -37,7 +37,7 @@ const handler = async (m, { text, conn, args }) => {
     } catch (e) {
       if (attempt === maxRetries) {
         await m.react('❌');
-        return conn.reply(m.chat, 'Error al enviar el video después de varios intentos.', m);
+        return conn.reply(m.chat, '🐬 𝙀𝙧𝙧𝙤𝙧 𝙖𝙡 𝙚𝙣𝙫𝙞𝙖𝙧 𝙚𝙡 𝙫𝙞𝙙𝙚𝙤 𝙙𝙚𝙨𝙥𝙪é𝙨 𝙙𝙚 𝙫𝙖𝙧𝙞𝙤𝙨 𝙞𝙣𝙩𝙚𝙣𝙩𝙤𝙨.', m);
       }
       await new Promise(resolve => setTimeout(resolve, 1000));
     }
