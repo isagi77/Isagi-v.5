@@ -17,7 +17,7 @@ const handler = async (m, { text, conn, args }) => {
 
   const result = res.data;
   if (!result || result.data.length === 0) {
-    return conn.reply(m.chat, 'No se encontraron resultados.', m);
+    return conn.reply(m.chat, '🐬 𝙉𝙤 𝙨𝙚 𝙚𝙣𝙘𝙤𝙣𝙩𝙧𝙖𝙧𝙤𝙣 𝙧𝙚𝙨𝙪𝙡𝙩𝙖𝙙𝙤𝙨.', m);
   }
 
   const videoData = result.data[0]; 
