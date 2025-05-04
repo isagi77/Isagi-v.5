@@ -58,7 +58,7 @@ const handler = async (m, { conn, text }) => {
           mediaType: 1, 
           showAdAttribution: true,
           title: 'Rule 34',
-          body: 'Nino Nakano Bot',
+          body: 'Nagi Bot',
           previewType: 0, 
           thumbnail: rule,
           sourceUrl: cn 
