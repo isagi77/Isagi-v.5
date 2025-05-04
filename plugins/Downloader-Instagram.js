@@ -24,7 +24,7 @@ const handler = async (m, { text, conn, args }) => {
   const videoUrl = videoData.dl_url;
 
   if (!videoUrl) {
-    return conn.reply(m.chat, 'No se encontró un enlace de descarga válido.', m);
+    return conn.reply(m.chat, '🪼 𝙉𝙤 𝙨𝙚 𝙚𝙣𝙘𝙤𝙣𝙩𝙧ó 𝙪𝙣 𝙚𝙣𝙡𝙖𝙘𝙚 𝙙𝙚 𝙙𝙚𝙨𝙘𝙖𝙧𝙜𝙖 𝙫á𝙡𝙞𝙙𝙤.', m);
   }
 
   const maxRetries = 3;
