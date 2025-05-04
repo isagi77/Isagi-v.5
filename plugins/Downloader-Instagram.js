@@ -2,14 +2,14 @@ import axios from 'axios';
 
 const handler = async (m, { text, conn, args }) => {
   if (!args[0]) {
-    return conn.reply(m.chat, '🚩 Por favor, ingresa un enlace de Instagram.', m, rcanal);
+    return conn.reply(m.chat, '🐬 Por favor, ingresa un enlace de Instagram.', m, rcanal);
   }
 
   const instagramUrl = args[0];
   let res;
 
   try {
-    await m.react('💜');
+    await m.react('🐬');
     res = await axios.get(`https://apis-starlights-team.koyeb.app/starlight/instagram-dl?url=${encodeURIComponent(instagramUrl)}`);
   } catch (e) {
     return conn.reply(m.chat, 'Error al obtener datos. Verifica el enlace.', m);
