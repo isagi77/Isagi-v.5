@@ -12,7 +12,7 @@ const handler = async (m, { text, conn, args }) => {
     await m.react('🐬');
     res = await axios.get(`https://apis-starlights-team.koyeb.app/starlight/instagram-dl?url=${encodeURIComponent(instagramUrl)}`);
   } catch (e) {
-    return conn.reply(m.chat, 'Error al obtener datos. Verifica el enlace.', m);
+    return conn.reply(m.chat, '🐬 𝙀𝙧𝙧𝙤𝙧 𝙖𝙡 𝙤𝙗𝙩𝙚𝙣𝙚𝙧 𝙙𝙖𝙩𝙤𝙨. 𝙑𝙚𝙧𝙞𝙛𝙞𝙘𝙖 𝙚𝙡 𝙚𝙣𝙡𝙖𝙘𝙚.', m);
   }
 
   const result = res.data;
