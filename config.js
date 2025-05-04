@@ -41,7 +41,7 @@ global.nameqr = 'Nagiqr'
 global.namebot = 'NagiBot'
 global.sessions = 'Sessions'
 global.jadi = 'JadiBots' 
-global.NakanoJadibts = true
+global.NagiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
