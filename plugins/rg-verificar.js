@@ -42,27 +42,25 @@ let handler = async function (m, { conn, text, args, usedPrefix, command }) {
     }
 
     let sn = createHash('md5').update(m.sender).digest('hex')
-    let regbot = `╔═━──══━────────━══──━═╗
-║    *Registrado por NagiBot*
-╚═━──══━────────━══──━═╝\n`
-regbot += `✦✧─────┈┈ ♡ ┈┈─────✧✦\n`
-regbot += `*「 」Nombre:* ${name}\n`
-regbot += `*「 」Edad:* ${age} años\n`
-regbot += `✦✧─────┈┈ ♡ ┈┈─────✧✦\n`
-regbot += `*「 」Recompensas:*\n> `
-regbot += `• 15 Estrellas\n> `
-regbot += `• 5 Coins\n> `
-regbot += `• 245 Experiencia\n> `
-regbot += `• 12 Tokens\n`
-regbot += `━━━━━━━━━━━━━━━━━━━━━━━\n> `
-regbot += `Usa *#perfil* para ver tu perfil.`
+    let regbot = `┌─⭓ 〘 ʀᴇɢɪsᴛʀᴏ ᴄᴏᴍᴘʟᴇᴛᴏ ‖ NagiBot 〙\n`
+regbot += `│\n`
+regbot += `│ 𖥔 Nombre: ${name}\n`
+regbot += `│ 𖥔 Edad: ${age} años\n`
+regbot += `│\n`
+regbot += `│ 🎁 Recompensas:\n`
+regbot += `│   ├─ ⭐ 15 Estrellas\n`
+regbot += `│   ├─ 💰 5 Coins\n`
+regbot += `│   ├─ ✨ 245 Exp\n`
+regbot += `│   └─ 🧩 12 Tokens\n`
+regbot += `│\n`
+regbot += `└─➤ Usa *#perfil* para ver tu perfil.`
 
   await conn.sendMessage(m.chat, {
         text: regbot,
         contextInfo: {
             externalAdReply: {
-                title: 'ＲＥＧＩＳＴＲＡＤＯ ✨️',
-                thumbnailUrl: 'https://qu.ax/YnWMn.jpg',
+                title: '𝙍𝙀𝙂𝙄𝙎𝙏𝙍𝘼𝘿𝙊 / 𝙉𝘼𝙂𝙄𝘽𝙊𝙏💥',
+                thumbnailUrl: 'https://qu.ax/UrOqk.jpg',
                 mediaType: 1,
                 renderLargerThumbnail: true
             }
