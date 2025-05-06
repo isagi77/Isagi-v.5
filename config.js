@@ -78,7 +78,7 @@ global.photoSity = [catalogo]
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.gp1 = 'https://chat.whatsapp.com/EteP5pnrAZC14y9wReGF1V'
+global.gp1 = 'https://whatsapp.com/channel/0029VajUPbECxoB0cYovo60W'
 global.comunidad1 = 'https://chat.whatsapp.com/DeJvBuS7QgB3Ybp1BZulWL'
 global.channel = 'https://whatsapp.com/channel/0029VajUPbECxoB0cYovo60W'
 global.channel2 = 'https://whatsapp.com/channel/0029VajUPbECxoB0cYovo60W'
