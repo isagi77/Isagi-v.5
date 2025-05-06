@@ -592,7 +592,7 @@ group: '```¡¡ESTA FUNCION SOLO PUEDE SER EJECUTADA EN GRUPOS!!```',
 private: '```¡¡ESTA FUNCIÓN SOLO PUEDE SER USADA EN CHAT PRIVADO!!```', 
 admin: '```¡¡ESTE COMANDO SOLO PUEDE SER USADO POR ADMINS!!```', 
 botAdmin: '```¡¡PARA USAR ESTA FUNCIÓN DEBO SER ADMIN DEL GRUPO!!```', 
-unreg: '```¡¡NECESITAS ESTAR REGISTRADO(A) PARA USAR ESTE COMANDO, ESCRIBE #reg PARA REGISTRARTE!!```',
+unreg: '*HOLA USUARIO PARA USAR EL BOT NECESITAS ESTAR REGISTRADO📥*\n_EJEMPLO #reg nombre.edad_\n*Y listo ✅️*',
 restrict: '```¡¡ESTA CARACTERÍSTICA ESTA DESACTIVADA!!```'
 }[type];
 if (msg) return m.reply(msg).then(_ => m.react('✖️'))}
