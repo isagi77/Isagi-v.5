@@ -1,184 +1,66 @@
-import axios from "axios";
-import cheerio from "cheerio";
+// downloader tiktod
+import axios from 'axios';
 
-let handler = async (m, { conn, text, usedPrefix, command }) => {
-  if (!text) {
-    return conn.reply(m.chat, `Usa el formato: ${usedPrefix + command} <enlace de TikTok>`, m, rcanal);
-  }
+let handler = async (m, { conn, text }) => {
+    if (!text) throw '📌 𝘽𝙪𝙨𝙘𝙖𝙧 𝙐𝙍𝙇 𝙙𝙚 𝙏𝙞𝙠𝙏𝙤𝙠!\n𝙀𝙟𝙚𝙢𝙥𝙡𝙤: .tiktok https://vt.tiktok.com/xxxxxx';
 
-  try {
-    await m.react('🕒');
-
-    const videoResult = await ttsave.video(text);
-    const { 
-      type, 
-      nickname, 
-      username, 
-      description, 
-      videoInfo, 
-      slides, 
-      audioUrl 
-    } = videoResult;
-
-    let message = `*✔️🍟Downloader tiktok.*
-
-> • *Nombre*: ${nickname || "-"}
-> • *Usuario*: ${username || "-"}
-> • *Descripción*: ${description || "-"}
-`.trim();
-
-    if (type === "slide") {
-      message += "\n> • *Tipo*: Presentación (Imágenes)";
-      await conn.reply(m.chat, message, m, rcanal);
-
-      for (let slide of slides) {
-        await m.react('✅');
-        await conn.sendFile(m.chat, slide.url, `presentación-${slide.number}.jpg`, "", m, rcanal);
-      }
-    } 
-    else if (type === "video") {
-      message += "\n> • *Tipo*: Video";
-
-      if (videoInfo.nowm) {
-        await m.react('✅');
-await conn.sendMessage(m.chat, {
-  video: { url: videoInfo.nowm },
-  caption: message,
-  footer: dev,
-  buttons: [
-    {
-      buttonId: `.tiktokmp3 ${text}`,
-      buttonText: {
-        displayText: 'Audio 🎧',
-      },
-    },
-    {
-      buttonId: `.tiktokhd ${text}`,
-      buttonText: {
-        displayText: 'Calidad HD',
-      },
-    },
-  ],
-  viewOnce: true,
-  headerType: 4,
-}, { quoted: m });
-      } else {
-        conn.reply(m.chat, "No se pudo obtener el video sin marca de agua.", m);
-      }
-    }
-
-    if (audioUrl) {
-    }
-  } catch (error) {
-    console.error(error);
-    conn.reply(m.chat, `Ocurrió un error al procesar la solicitud. Asegúrate de que el enlace de TikTok sea válido e inténtalo nuevamente.`, m);
-  }
-};
-
-handler.help = ["tiktok *<url>*"];
-handler.tags = ["dl"];
-handler.command = ["ttiktokk"];
-export default handler;
-
-const headers = {
-  authority: "ttsave.app",
-  accept: "application/json, text/plain, */*",
-  origin: "https://ttsave.app",
-  referer: "https://ttsave.app/en",
-  "user-agent": "Postify/1.0.0",
-};
-
-const ttsave = {
-  submit: async function (url, referer) {
-    const headerx = { ...headers, referer };
-    const data = { query: url, language_id: "1" };
-    return axios.post("https://ttsave.app/download", data, { headers: headerx });
-  },
-
-  parse: function ($) {
-    const uniqueId = $("#unique-id").val();
-    const nickname = $("h2.font-extrabold").text();
-    const profilePic = $("img.rounded-full").attr("src");
-    const username = $("a.font-extrabold.text-blue-400").text();
-    const description = $("p.text-gray-600").text();
-
-    const dlink = {
-      nowm: $("a.w-full.text-white.font-bold").first().attr("href"),
-      wm: $("a.w-full.text-white.font-bold").eq(1).attr("href"),
-      audio: $("a[type='audio']").attr("href"),
-      profilePic: $("a[type='profile']").attr("href"),
-      cover: $("a[type='cover']").attr("href"),
-    };
-
-    const stats = {
-      reproducciones: "",
-      meGusta: "",
-      comentarios: "",
-      compartidos: "",
-    };
-
-    $(".flex.flex-row.items-center.justify-center").each((index, element) => {
-      const $element = $(element);
-      const svgPath = $element.find("svg path").attr("d");
-      const value = $element.find("span.text-gray-500").text().trim();
-
-      if (svgPath && svgPath.startsWith("M10 18a8 8 0 100-16")) {
-        stats.reproducciones = value;
-      } else if (svgPath && svgPath.startsWith("M3.172 5.172a4 4 0 015.656")) {
-        stats.meGusta = value || "0";
-      } else if (svgPath && svgPath.startsWith("M18 10c0 3.866-3.582")) {
-        stats.comentarios = value;
-      } else if (svgPath && svgPath.startsWith("M17.593 3.322c1.1.128")) {
-        stats.compartidos = value;
-      }
-    });
-
-    const tituloCancion = $(".flex.flex-row.items-center.justify-center.gap-1.mt-5")
-      .find("span.text-gray-500")
-      .text()
-      .trim();
-
-    const slides = $("a[type='slide']")
-      .map((i, el) => ({
-        number: i + 1,
-        url: $(el).attr("href"),
-      }))
-      .get();
-
-    return {
-      uniqueId,
-      nickname,
-      profilePic,
-      username,
-      description,
-      dlink,
-      stats,
-      tituloCancion,
-      slides,
-    };
-  },
-
-  video: async function (link) {
     try {
-      const response = await this.submit(link, "https://ttsave.app/en");
-      const $ = cheerio.load(response.data);
-      const result = this.parse($);
+        const { data } = await axios.get(`https://zennz-api.vercel.app/api/downloader/tiktok?url=${encodeURIComponent(text)}`);
 
-      if (result.slides && result.slides.length > 0) {
-        return { type: "slide", ...result };
-      }
+        if (!data.status || !data.data?.no_watermark) throw '❌ 𝙂𝙖𝙜𝙖𝙡 𝙙𝙚𝙨𝙘𝙖𝙧𝙜ó 𝙫𝙞𝙙𝙚𝙤 𝙫𝙞𝙙𝙚𝙤 𝙏𝙞𝙠𝙏𝙤𝙠!';
 
-      return {
-        type: "video",
-        ...result,
-        videoInfo: {
-          nowm: result.dlink.nowm,
-          wm: result.dlink.wm,
-        },
-      };
-    } catch (error) {
-      console.error(error);
-      throw error;
+        const {
+            title,
+            no_watermark,
+            music
+        } = data.data;
+
+        const caption = `╭───『 *𝙏𝙄𝙆𝙏𝙊𝙆 𝘿𝙀𝙎𝘾𝘼𝙍𝙂𝘼𝘿𝙊𝙍* 』
+│📝 *𝙏í𝙩𝙪𝙡𝙤:* ${title}
+╰────────────⬣`;
+
+        await conn.sendMessage(m.chat, {
+            video: { url: no_watermark },
+            caption,
+            contextInfo: {
+                externalAdReply: {
+                    title: 'TikTok Downloader',
+                    body: title,
+                    sourceUrl: text,
+                    mediaType: 1,
+                    renderLargerThumbnail: false
+                }
+            }
+        }, { quoted: m });
+
+        if (music) {
+            await conn.sendMessage(m.chat, {
+                audio: { url: music },
+                mimetype: 'audio/mpeg',
+                fileName: `${title}.mp3`,
+                contextInfo: {
+                    externalAdReply: {
+                        title: 'TikTok Downloader',
+                        body: title,
+                        sourceUrl: text,
+                        mediaType: 1,
+                        renderLargerThumbnail: false
+                    }
+                }
+            }, { quoted: m });
+        } else {
+            m.reply('✅ 𝙀𝙡 𝙫𝙞𝙙𝙚𝙤 𝙚𝙨𝙩á 𝙙𝙞𝙨𝙥𝙤𝙣𝙞𝙗𝙡𝙚, 𝙥𝙚𝙧𝙤 𝙚𝙡 𝙖𝙪𝙙𝙞𝙤 𝙣𝙤 𝙚𝙨 𝙙𝙚 𝙩𝙚𝙧𝙘𝙚𝙧𝙤𝙨..');
+        }
+
+    } catch (e) {
+        console.error('[TIKTOK ERROR]', e);
+        throw `❌ 𝙂𝙖𝙜𝙖𝙡 𝙙𝙚𝙨𝙘𝙖𝙧𝙜𝙖𝙧 𝙫í𝙙𝙚𝙤 𝙫í𝙙𝙚𝙤 𝙙𝙚 𝙏𝙞𝙠𝙏𝙤𝙠!\n\n𝙍𝙚𝙜𝙞𝙨𝙩𝙧𝙤 error: ${e.message}`;
     }
-  },
 };
+
+handler.help = ['tiktok <url>'];
+handler.tags = ['downloader'];
+handler.command = /^(tiktok|tt|ttdl)$/i;
+handler.limit = false;
+
+export default handler;
