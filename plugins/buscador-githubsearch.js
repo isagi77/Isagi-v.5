@@ -41,13 +41,13 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
                 forwardingScore: 200,
                 isForwarded: true,
                 externalAdReply: {
-                    mediaUrl: 'https://github.com/JoseXrl15k',
+                    mediaUrl: 'https://github.com/El-brayan502,
                     mediaType: 2,
                     previewType: 'pdf',
                     title: `• Resultados Encontrados🔎`,
                     body: 'Desarrollado por Jose',
                     thumbnail: catalogo,
-                    sourceUrl: 'https://wa.me/51904792134'
+                    sourceUrl: 'https://wa.me/50231458537'
                 }
             },
             caption: str,
