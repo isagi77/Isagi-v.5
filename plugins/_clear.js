@@ -10,7 +10,7 @@ const paths = {
 
 function cleanSubbotDirectories() {
   for (const [name, path] of Object.entries(paths)) {
-    if (name === 'NakanoSession') continue; // Skip SanSession for this function
+    if (name === 'NagiSession') continue; // Skip SanSession for this function
 
     fs.readdir(path, (err, subbotDirs) => {
       if (err) {
@@ -64,7 +64,7 @@ function cleanSubbotDirectories() {
 }
 
 function cleanNakanoSession() {
-  const sessionPath = paths.NakanoSession;
+  const sessionPath = paths.NagiSession;
 
   fs.readdir(sessionPath, (err, files) => {
     if (err) {
