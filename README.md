@@ -20,7 +20,7 @@
 
 <h1 align="center">ＮＡＧＩＢＯＴＶ２</p>
 <p>
-        <img src= "https://qu.ax/sVNZv.jpg">
+        <img src= "https://qu.ax/dTygi.jpg">
     </p>
     <p align="center">
 <p align="center">
