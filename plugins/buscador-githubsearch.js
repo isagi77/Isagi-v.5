@@ -45,7 +45,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
                     mediaType: 2,
                     previewType: 'pdf',
                     title: `• Resultados Encontrados🔎`,
-                    body: 'Desarrollado por Jose',
+                    body: 'Desarrollado por Brayan330,
                     thumbnail: catalogo,
                     sourceUrl: 'https://wa.me/50231458537'
                 }
