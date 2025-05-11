@@ -32,7 +32,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         var document = doc[Math.floor(Math.random() * doc.length)]
 
         let buttonMessage = {
-            document: { url: `https://github.com/JoseXrl15k` },
+            document: { url: `https://github.com/El-brayan502` },
             mimetype: `application/${document}`,
             fileName: `Nagi Bot`,
             fileLength: 99999999999999,
