@@ -34,7 +34,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
         let buttonMessage = {
             document: { url: `https://github.com/JoseXrl15k` },
             mimetype: `application/${document}`,
-            fileName: `Nino Nakano Bot`,
+            fileName: `Nagi Bot`,
             fileLength: 99999999999999,
             pageCount: 200,
             contextInfo: {
