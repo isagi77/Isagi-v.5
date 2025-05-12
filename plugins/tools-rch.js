@@ -25,7 +25,7 @@ const handler = async (m, { conn, text }) => {
     const [, , , , channelId, messageId] = link.split('/')
     const res = await conn.newsletterMetadata("invite", channelId)
     await conn.newsletterReactMessage(res.id, messageId, emoji)
-    m.reply(`✅ Reacción  *${emoji}* Las cremas berhasil son canal  *${res.name}*.`)
+    m.reply(`✅ Reacción  *${emoji}* Las cremas berhasil son canal   *${res.name}*.`)
   } catch (e) {
     console.error(e)
     m.reply("❌ Error\nGagal cambió la reacción. ¡Comprueba el enlace o conexión!!")
