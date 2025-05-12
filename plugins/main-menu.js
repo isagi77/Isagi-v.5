@@ -197,7 +197,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         image: { url: img },
         caption: menuText,
         buttons: buttons,
-        footer: "WHATSAPP BOT X BRAYAN MOSCOSO",
+        footer: "CANAL: https://whatsapp.com/channel/0029VajUPbECxoB0cYovo60W",
         viewOnce: true,
       },
       { quoted: m }
