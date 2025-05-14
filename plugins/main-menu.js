@@ -64,9 +64,9 @@ const defaultMenu = {
         𝙉𝘼𝙂𝙄 𝙎𝙄𝙈𝙋𝙇𝙀-𝘽𝙊𝙏 
 𝘽𝙊𝙏 𝙓 𝙒𝙃𝘼𝙏𝙎𝘼𝙋𝙋
 `.trimStart(),
-header: '╭───[  %category  ]── ❍',
-body:   '│❍ %cmd %islimit %isPremium',
-footer: '╰──────────────',
+header: '╭─〔 *✦  %category  ✦* 〕─╮',
+body:   '│ ⤷ %cmd %islimit %isPremium',
+footer: '╰───────────────╯',
   after: `© ${textbot}`,
 };
 
@@ -174,16 +174,16 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
     const buttons = [
       {
         buttonId: `${_p}owner`,
-        buttonText: { displayText: "👑 𝘾 𝙍 𝙀 𝘼 𝘿 𝙊 𝙍" },
+        buttonText: { displayText: "👑 Ｃ Ｒ Ｅ Ａ Ｄ Ｏ Ｒ" },
         type: 1,
       },
       {
         buttonId: `${_p}code`,
-        buttonText: { displayText: "🕹 𝙎  𝙀  𝙍  𝘽  𝙊  𝙏" },
+        buttonText: { displayText: "🕹 Ｓ Ｅ Ｒ Ｂ Ｏ Ｔ" },
         type: 1,
       },      {
         buttonId: `${_p}grupos`,
-        buttonText: { displayText: "🌪 𝙂  𝙍  𝙐  𝙋  𝙊  𝙎"},
+        buttonText: { displayText: "🌪 Ｇ Ｒ Ｕ Ｐ Ｏ Ｓ" },
         type: 1,
       },
     ];
@@ -197,7 +197,7 @@ let handler = async (m, { conn, usedPrefix: _p, __dirname }) => {
         image: { url: img },
         caption: menuText,
         buttons: buttons,
-        footer: "CANAL: https://whatsapp.com/channel/0029VajUPbECxoB0cYovo60W",
+        footer: "WHATSAPP BOT X BRAYAN MOSCOSO",
         viewOnce: true,
       },
       { quoted: m }
