@@ -20,7 +20,7 @@
 
 <h1 align="center">ISAGI.V5-</p>
 <p>
-        <img src= "https://qu.ax/dTygi.jpg">
+        <img src= "https://files.catbox.moe/a9ep9c.jpg">
     </p>
     <p align="center">
 <p align="center">
